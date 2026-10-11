@@ -951,11 +951,39 @@ main {
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 104px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
   .top-nav,
   main,
-  .main-layout {
+  .page-main,
+  .main-layout,
+  .site-footer {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .top-nav {
+    gap: 12px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  .top-nav-links {
+    gap: 8px 15px;
+  }
+
+  .top-nav-links a {
+    font-size: 16px;
+  }
+
+  main {
+    padding-top: 24px;
   }
 
   .hero {
@@ -963,22 +991,81 @@ main {
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .hero h1 span {
+    margin-top: 10px;
+    font-size: 0.43em;
   }
 
   .hero-identity {
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
+    gap: 22px;
+  }
+
+  .hero-photo {
+    flex-basis: auto;
+    width: min(58vw, 220px);
+    max-width: 100%;
   }
 
   .hero-statement {
-    font-size: 19px;
+    max-width: none;
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .research-sketch {
+    max-width: 100%;
+    margin-top: 28px;
+  }
+
+  .research-sketch figcaption {
+    margin-top: 18px;
+  }
+
+  .intro-grid {
+    padding-top: 50px;
+  }
+
+  .intro-block {
+    padding-right: 0;
+  }
+
+  .intro-block h2,
+  .split-section h2,
+  .page-header h1,
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .intro-block p,
+  .timeline,
+  .paper-list {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .about-actions {
+    gap: 12px;
+  }
+
+  .home-news {
+    padding-bottom: 58px;
+  }
+
+  .home-news .timeline {
+    min-height: 0;
   }
 
   .news-item {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 5px;
+    padding-bottom: 22px;
   }
 
   .news-item::before {
@@ -990,7 +1077,67 @@ main {
     border-left: 0;
   }
 
+  .news-date {
+    font-size: 13px;
+  }
+
+  .news-tag {
+    margin-left: 4px;
+    transform: none;
+  }
+
   .news-pagination {
+    justify-content: flex-end;
     margin-left: 0;
+  }
+
+  .page-main {
+    padding-top: 38px;
+    padding-bottom: 84px;
+  }
+
+  .page-header {
+    padding-bottom: 24px;
+  }
+
+  .page-list {
+    margin-top: 28px;
+  }
+
+  .pub-item {
+    padding: 26px 0 30px;
+  }
+
+  .pub-title {
+    font-size: 19px;
+    line-height: 1.32;
+  }
+
+  .pub-abstract {
+    padding-right: 0;
+    font-size: 14.5px;
+  }
+
+  .abstract-toggle {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 8px;
+  }
+
+  .pub-links {
+    gap: 7px;
+  }
+
+  .site-footer {
+    margin-top: 4px;
+    padding-top: 24px;
+    padding-bottom: 26px;
+    font-size: 12px;
+  }
+
+  .site-footer::before {
+    left: 18px;
+    right: 18px;
   }
 }
